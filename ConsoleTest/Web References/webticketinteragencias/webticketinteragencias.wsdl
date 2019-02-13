@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://webticketinteragencias.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://webticketinteragencias.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://webticketinteragencias.org/">
+      <s:element name="InsertaSolicitud">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:Inserta_SolicitudEmisionRQ" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Inserta_SolicitudEmisionRQ">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="iPUsuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="signature" type="tns:Signature" />
+          <s:element minOccurs="1" maxOccurs="1" name="idWeb" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idUsuWeb" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pnrCod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoReserva" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="promotor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tarfBruta" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="igv" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="porcentaje" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="queues" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="otrosPagos" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="incentivos" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="tarfNeta" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="observacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idOfiDestino" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoTarifa" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idUsuWebSeg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="doc1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroDoc1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="doc2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroDoc2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idUsuWebProc" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idDepDestino" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomPagador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apePagador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="itinerarios" type="tns:ArrayOfSolicitudItinerario" />
+          <s:element minOccurs="0" maxOccurs="1" name="pagos" type="tns:ArrayOfSolicitudPago" />
+          <s:element minOccurs="0" maxOccurs="1" name="pasajeros" type="tns:ArrayOfSolicitudPasajero" />
+          <s:element minOccurs="0" maxOccurs="1" name="paisDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sabreAmadeus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="sistemaOrigen" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomBanco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomBanco2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codSeguridadTarj" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idPuntoEmision" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idsucursalEmision" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="conWaiver" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idSubCodigo" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="fileReferencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomSucBanco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomImagen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="enviaDeposito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strNombrePagina" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Signature">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idWeb" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="keyAccess" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idSecuencia" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="browser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rUC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="razonSocial" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idDispositivo" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSolicitudItinerario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SolicitudItinerario" nillable="true" type="tns:SolicitudItinerario" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SolicitudItinerario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="lineaAerea" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroVuelo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clase" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaVuelo" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="origenVuelo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="destinoVuelo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="familyFare" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSolicitudPago">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SolicitudPago" nillable="true" type="tns:SolicitudPago" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SolicitudPago">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idPago" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pagoTipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pagoCash" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pagoTarjeta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pagoTipoTarjeta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroTarjeta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechVenTarjeta" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="titularTarjeta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idPaisTarjeta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="bancoTitularTarjeta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroDocumento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idiOfi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroCuenta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroOperacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="monto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechDeposito" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="idiOfi2" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroCuenta2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroOperacion2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="monto2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechDeposito2" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="strNombreBanco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strNombreBanco2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCodSeguridad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strSucursalBanco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strReferenciaDeposito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strNombreArchivo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSolicitudPasajero">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SolicitudPasajero" nillable="true" type="tns:SolicitudPasajero" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SolicitudPasajero">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tipoPasajero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombrePasajero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nroDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoDocumentoSabre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="documentoSabre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaNacimiento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sexo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strNumeroPax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strNumeroRUC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertaSolicitudResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertaSolicitudResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HorarioEasy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:HorarioRQ" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HorarioRQ">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="eCondicionAgy" type="tns:CondicionAgy" />
+          <s:element minOccurs="1" maxOccurs="1" name="intIdWeb" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="eModuloEasy" type="tns:ModuloEasy" />
+          <s:element minOccurs="1" maxOccurs="1" name="intOpcion" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CondicionAgy">
+        <s:restriction base="s:string">
+          <s:enumeration value="CON" />
+          <s:enumeration value="CRED" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ModuloEasy">
+        <s:restriction base="s:string">
+          <s:enumeration value="Emision" />
+          <s:enumeration value="Void" />
+          <s:enumeration value="Changer" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="HorarioEasyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HorarioEasyResult" type="tns:HorarioRS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HorarioRS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="intPermitirAutomatica" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="intPermitirCounter" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CodigoPlanilla">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUsuWebLogin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CodigoPlanillaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoPlanillaResult" type="tns:Planilla" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Planilla">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strIdEmpresaPlanilla" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strIdCodigoPlanilla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HorarioEasy_TEST">
+        <s:complexType />
+      </s:element>
+      <s:element name="HorarioEasy_TESTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HorarioEasy_TESTResult" type="tns:HorarioRS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaSolicitud_TEST">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertaSolicitud_TESTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertaSolicitud_TESTResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Planilla" nillable="true" type="tns:Planilla" />
+      <s:element name="HorarioRS" nillable="true" type="tns:HorarioRS" />
+      <s:element name="int" type="s:int" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertaSolicitudSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="InsertaSolicitudSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="HorarioEasySoapIn">
+    <wsdl:part name="parameters" element="tns:HorarioEasy" />
+  </wsdl:message>
+  <wsdl:message name="HorarioEasySoapOut">
+    <wsdl:part name="parameters" element="tns:HorarioEasyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CodigoPlanillaSoapIn">
+    <wsdl:part name="parameters" element="tns:CodigoPlanilla" />
+  </wsdl:message>
+  <wsdl:message name="CodigoPlanillaSoapOut">
+    <wsdl:part name="parameters" element="tns:CodigoPlanillaResponse" />
+  </wsdl:message>
+  <wsdl:message name="HorarioEasy_TESTSoapIn">
+    <wsdl:part name="parameters" element="tns:HorarioEasy_TEST" />
+  </wsdl:message>
+  <wsdl:message name="HorarioEasy_TESTSoapOut">
+    <wsdl:part name="parameters" element="tns:HorarioEasy_TESTResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaSolicitud_TESTSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaSolicitud_TEST" />
+  </wsdl:message>
+  <wsdl:message name="InsertaSolicitud_TESTSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaSolicitud_TESTResponse" />
+  </wsdl:message>
+  <wsdl:message name="CodigoPlanillaHttpGetIn">
+    <wsdl:part name="strUsuWebLogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CodigoPlanillaHttpGetOut">
+    <wsdl:part name="Body" element="tns:Planilla" />
+  </wsdl:message>
+  <wsdl:message name="HorarioEasy_TESTHttpGetIn" />
+  <wsdl:message name="HorarioEasy_TESTHttpGetOut">
+    <wsdl:part name="Body" element="tns:HorarioRS" />
+  </wsdl:message>
+  <wsdl:message name="InsertaSolicitud_TESTHttpGetIn" />
+  <wsdl:message name="InsertaSolicitud_TESTHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CodigoPlanillaHttpPostIn">
+    <wsdl:part name="strUsuWebLogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CodigoPlanillaHttpPostOut">
+    <wsdl:part name="Body" element="tns:Planilla" />
+  </wsdl:message>
+  <wsdl:message name="HorarioEasy_TESTHttpPostIn" />
+  <wsdl:message name="HorarioEasy_TESTHttpPostOut">
+    <wsdl:part name="Body" element="tns:HorarioRS" />
+  </wsdl:message>
+  <wsdl:message name="InsertaSolicitud_TESTHttpPostIn" />
+  <wsdl:message name="InsertaSolicitud_TESTHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="webticketinteragenciasSoap">
+    <wsdl:operation name="InsertaSolicitud">
+      <wsdl:input message="tns:InsertaSolicitudSoapIn" />
+      <wsdl:output message="tns:InsertaSolicitudSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy">
+      <wsdl:input message="tns:HorarioEasySoapIn" />
+      <wsdl:output message="tns:HorarioEasySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CodigoPlanilla">
+      <wsdl:input message="tns:CodigoPlanillaSoapIn" />
+      <wsdl:output message="tns:CodigoPlanillaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy_TEST">
+      <wsdl:input message="tns:HorarioEasy_TESTSoapIn" />
+      <wsdl:output message="tns:HorarioEasy_TESTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaSolicitud_TEST">
+      <wsdl:input message="tns:InsertaSolicitud_TESTSoapIn" />
+      <wsdl:output message="tns:InsertaSolicitud_TESTSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="webticketinteragenciasHttpGet">
+    <wsdl:operation name="CodigoPlanilla">
+      <wsdl:input message="tns:CodigoPlanillaHttpGetIn" />
+      <wsdl:output message="tns:CodigoPlanillaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy_TEST">
+      <wsdl:input message="tns:HorarioEasy_TESTHttpGetIn" />
+      <wsdl:output message="tns:HorarioEasy_TESTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaSolicitud_TEST">
+      <wsdl:input message="tns:InsertaSolicitud_TESTHttpGetIn" />
+      <wsdl:output message="tns:InsertaSolicitud_TESTHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="webticketinteragenciasHttpPost">
+    <wsdl:operation name="CodigoPlanilla">
+      <wsdl:input message="tns:CodigoPlanillaHttpPostIn" />
+      <wsdl:output message="tns:CodigoPlanillaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy_TEST">
+      <wsdl:input message="tns:HorarioEasy_TESTHttpPostIn" />
+      <wsdl:output message="tns:HorarioEasy_TESTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaSolicitud_TEST">
+      <wsdl:input message="tns:InsertaSolicitud_TESTHttpPostIn" />
+      <wsdl:output message="tns:InsertaSolicitud_TESTHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="webticketinteragenciasSoap" type="tns:webticketinteragenciasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertaSolicitud">
+      <soap:operation soapAction="http://webticketinteragencias.org/InsertaSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy">
+      <soap:operation soapAction="http://webticketinteragencias.org/HorarioEasy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CodigoPlanilla">
+      <soap:operation soapAction="http://webticketinteragencias.org/CodigoPlanilla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy_TEST">
+      <soap:operation soapAction="http://webticketinteragencias.org/HorarioEasy_TEST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaSolicitud_TEST">
+      <soap:operation soapAction="http://webticketinteragencias.org/InsertaSolicitud_TEST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="webticketinteragenciasSoap12" type="tns:webticketinteragenciasSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertaSolicitud">
+      <soap12:operation soapAction="http://webticketinteragencias.org/InsertaSolicitud" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy">
+      <soap12:operation soapAction="http://webticketinteragencias.org/HorarioEasy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CodigoPlanilla">
+      <soap12:operation soapAction="http://webticketinteragencias.org/CodigoPlanilla" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy_TEST">
+      <soap12:operation soapAction="http://webticketinteragencias.org/HorarioEasy_TEST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaSolicitud_TEST">
+      <soap12:operation soapAction="http://webticketinteragencias.org/InsertaSolicitud_TEST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="webticketinteragenciasHttpGet" type="tns:webticketinteragenciasHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CodigoPlanilla">
+      <http:operation location="/CodigoPlanilla" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy_TEST">
+      <http:operation location="/HorarioEasy_TEST" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaSolicitud_TEST">
+      <http:operation location="/InsertaSolicitud_TEST" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="webticketinteragenciasHttpPost" type="tns:webticketinteragenciasHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CodigoPlanilla">
+      <http:operation location="/CodigoPlanilla" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorarioEasy_TEST">
+      <http:operation location="/HorarioEasy_TEST" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaSolicitud_TEST">
+      <http:operation location="/InsertaSolicitud_TEST" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="webticketinteragencias">
+    <wsdl:port name="webticketinteragenciasSoap" binding="tns:webticketinteragenciasSoap">
+      <soap:address location="http://localhost:40620/webticketinteragencias.asmx" />
+    </wsdl:port>
+    <wsdl:port name="webticketinteragenciasSoap12" binding="tns:webticketinteragenciasSoap12">
+      <soap12:address location="http://localhost:40620/webticketinteragencias.asmx" />
+    </wsdl:port>
+    <wsdl:port name="webticketinteragenciasHttpGet" binding="tns:webticketinteragenciasHttpGet">
+      <http:address location="http://localhost:40620/webticketinteragencias.asmx" />
+    </wsdl:port>
+    <wsdl:port name="webticketinteragenciasHttpPost" binding="tns:webticketinteragenciasHttpPost">
+      <http:address location="http://localhost:40620/webticketinteragencias.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost:40620/webticketinteragencias.asmx?wsdl" docRef="http://localhost:40620/webticketinteragencias.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost:40620/webticketinteragencias.asmx" xmlns:q1="http://webticketinteragencias.org/" binding="q1:webticketinteragenciasSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost:40620/webticketinteragencias.asmx" xmlns:q2="http://webticketinteragencias.org/" binding="q2:webticketinteragenciasSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

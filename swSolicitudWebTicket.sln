@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "swSolicitudes", "swSolicitudes\swSolicitudes.csproj", "{1CCA2E56-33F3-4C5E-8BBD-DEA308092D7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencias", "Dependencias", "{1991026C-62C8-43FC-B4B6-540C71FF6A8E}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencias\ASPUnhandledException.dll = Dependencias\ASPUnhandledException.dll
+		Dependencias\CoreLib.dll = Dependencias\CoreLib.dll
+		Dependencias\CoreWebLib.dll = Dependencias\CoreWebLib.dll
+		Dependencias\CustomLog.dll = Dependencias\CustomLog.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3eros", "3eros", "{84F16569-D0BB-48FF-9FC4-F6486B107948}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencias\3eros\log4net.dll = Dependencias\3eros\log4net.dll
+		Dependencias\3eros\Newtonsoft.Json.dll = Dependencias\3eros\Newtonsoft.Json.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Librerias", "Librerias", "{5E31ED7E-C0AF-465B-8B2F-7814490ADB9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "Librerias\AccesoDatos\AccesoDatos.csproj", "{44377CBF-4899-458F-8318-E1AF2A3A02B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Librerias\Entidades\Entidades.csproj", "{65C03D7B-C60E-4C43-84DD-31D48BA0D9E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{16BAA31E-9F00-421F-BD44-97AEB0CA3E5D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1CCA2E56-33F3-4C5E-8BBD-DEA308092D7B} = {1CCA2E56-33F3-4C5E-8BBD-DEA308092D7B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPUnhandledException", "Librerias\ASPUnhandledException\ASPUnhandledException.csproj", "{C4BA28A1-7E77-4E9F-923E-CBC3A2BAA201}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ConsoleTest\\ConsoleTest.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = ConsoleTest\\
+		SccProjectUniqueName2 = Librerias\\AccesoDatos\\AccesoDatos.csproj
+		SccProjectTopLevelParentUniqueName2 = swSolicitudWebTicket.sln
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = Librerias\\AccesoDatos\\
+		SccProjectUniqueName3 = Librerias\\Entidades\\Entidades.csproj
+		SccProjectTopLevelParentUniqueName3 = swSolicitudWebTicket.sln
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = Librerias\\Entidades\\
+		SccProjectUniqueName4 = swSolicitudes\\swSolicitudes.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = swSolicitudes\\
+		SccProjectUniqueName5 = Librerias\\ASPUnhandledException\\ASPUnhandledException.csproj
+		SccProjectTopLevelParentUniqueName5 = swSolicitudWebTicket.sln
+		SccProjectName5 = \u0022$/swSolicitudWebTicket/swSolicitudWebTicket/Librerias/ASPUnhandledException\u0022,\u0020TBAAAAAA
+		SccLocalPath5 = Librerias\\ASPUnhandledException
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CCA2E56-33F3-4C5E-8BBD-DEA308092D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CCA2E56-33F3-4C5E-8BBD-DEA308092D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CCA2E56-33F3-4C5E-8BBD-DEA308092D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CCA2E56-33F3-4C5E-8BBD-DEA308092D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44377CBF-4899-458F-8318-E1AF2A3A02B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44377CBF-4899-458F-8318-E1AF2A3A02B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44377CBF-4899-458F-8318-E1AF2A3A02B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44377CBF-4899-458F-8318-E1AF2A3A02B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C03D7B-C60E-4C43-84DD-31D48BA0D9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C03D7B-C60E-4C43-84DD-31D48BA0D9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C03D7B-C60E-4C43-84DD-31D48BA0D9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C03D7B-C60E-4C43-84DD-31D48BA0D9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16BAA31E-9F00-421F-BD44-97AEB0CA3E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16BAA31E-9F00-421F-BD44-97AEB0CA3E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16BAA31E-9F00-421F-BD44-97AEB0CA3E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16BAA31E-9F00-421F-BD44-97AEB0CA3E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4BA28A1-7E77-4E9F-923E-CBC3A2BAA201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4BA28A1-7E77-4E9F-923E-CBC3A2BAA201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4BA28A1-7E77-4E9F-923E-CBC3A2BAA201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4BA28A1-7E77-4E9F-923E-CBC3A2BAA201}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{84F16569-D0BB-48FF-9FC4-F6486B107948} = {1991026C-62C8-43FC-B4B6-540C71FF6A8E}
+		{44377CBF-4899-458F-8318-E1AF2A3A02B4} = {5E31ED7E-C0AF-465B-8B2F-7814490ADB9A}
+		{65C03D7B-C60E-4C43-84DD-31D48BA0D9E0} = {5E31ED7E-C0AF-465B-8B2F-7814490ADB9A}
+		{C4BA28A1-7E77-4E9F-923E-CBC3A2BAA201} = {5E31ED7E-C0AF-465B-8B2F-7814490ADB9A}
+	EndGlobalSection
+EndGlobal
